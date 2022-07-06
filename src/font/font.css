@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Coding";
+  font-display: fallback;
+
+  src: url("./D2Coding.ttf") format("truetype"),
+    url("./D2Coding.woff") format("woff"),
+    url("./D2Coding.eot") format("embedded-opentype");
+
+  font-style: normal;
+}
