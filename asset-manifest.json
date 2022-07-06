@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nyanyak-blog/static/css/main.cb4eef7d.css",
-    "main.js": "/nyanyak-blog/static/js/main.91c950e0.js",
+    "main.js": "/nyanyak-blog/static/js/main.d80d8906.js",
     "static/js/787.f587e8d5.chunk.js": "/nyanyak-blog/static/js/787.f587e8d5.chunk.js",
     "static/media/D2Coding.eot": "/nyanyak-blog/static/media/D2Coding.0e3584964a85e7ef0f0c.eot",
     "static/media/D2Coding.ttf": "/nyanyak-blog/static/media/D2Coding.8e1251be588cceb18bae.ttf",
@@ -9,11 +9,11 @@
     "static/media/YouTube.png": "/nyanyak-blog/static/media/YouTube.5520ae5a26efacf950ea.png",
     "index.html": "/nyanyak-blog/index.html",
     "main.cb4eef7d.css.map": "/nyanyak-blog/static/css/main.cb4eef7d.css.map",
-    "main.91c950e0.js.map": "/nyanyak-blog/static/js/main.91c950e0.js.map",
+    "main.d80d8906.js.map": "/nyanyak-blog/static/js/main.d80d8906.js.map",
     "787.f587e8d5.chunk.js.map": "/nyanyak-blog/static/js/787.f587e8d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb4eef7d.css",
-    "static/js/main.91c950e0.js"
+    "static/js/main.d80d8906.js"
   ]
 }
