@@ -105,7 +105,7 @@ const BgImage = styled.img`
 const Pf = styled.div`
   color: #e5e5e5;
   position: absolute;
-  z-index: 10;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
