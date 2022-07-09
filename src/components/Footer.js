@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-direction: column;
   height: 7vh;
   position: relative;
-  z-index: 4;
+  z-index: 30;
   background-color: #f6f6f6;
   color: #b0b0a3;
   font-family: "Coding";
