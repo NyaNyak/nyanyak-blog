@@ -121,7 +121,7 @@ const Pf = styled.div`
 `;
 const Status = styled.div`
   text-align: left;
-  border-left: 2px solid white;
+  border-left: 2px solid #e5e5e5;
   padding: 0vh 0vh 0vh 1vh;
 `;
 const PfImage = styled.img`
