@@ -10,6 +10,7 @@ const Container = styled.div`
   position: fixed;
   flex-direction: column;
   top: 6vh;
+  z-index: 6;
   @media (max-width: 500px) {
     top: 5vh;
   }
