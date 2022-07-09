@@ -7,12 +7,13 @@ const Container = styled.div`
   height: 100vh;
   width: 220px;
   display: flex;
-  position: fixed;
+  position: absolute;
   flex-direction: column;
   top: 6vh;
-  z-index: 6;
+  z-index: 7;
   @media (max-width: 500px) {
     top: 5vh;
+    z-index: 20;
   }
 `;
 

@@ -13,6 +13,7 @@ const Container = styled.div`
   flex-direction: column;
   height: 6vh;
   position: sticky;
+  z-index: 20;
   top: 0vh;
   left: 0vw;
   color: #d5d5d5;
