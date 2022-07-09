@@ -52,7 +52,7 @@ const Intro = styled.div`
   #div0 {
     font-weight: 700;
     color: #f2f2f2;
-    font-size: 7.5vh;
+    font-size: 6vh;
   }
   hr {
     width: 40vh;
