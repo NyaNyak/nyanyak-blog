@@ -96,8 +96,15 @@ function Header() {
               <Image src={MenuBt} />
             </Menu>
           )}
-          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-            <Logo>code.Nyak();</Logo>
+          <Link
+            to="/"
+            onClick={() => {
+              window.location.reload();
+              window.scrollTo(0, 0);
+            }}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Logo>code.Nyak()</Logo>
           </Link>
         </LogoBox>
         <RightMenu></RightMenu>

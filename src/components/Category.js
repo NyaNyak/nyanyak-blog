@@ -37,11 +37,28 @@ const CBt = styled.button`
   text-align: left;
   letter-spacing: 1px;
   width: 220px;
+  height: 50px;
+  border: none;
+  font-family: "Coding";
+  color: #d5d5d5;
+  font-size: 17px;
+  background-color: #393939;
+  &:hover {
+    cursor: pointer;
+    background-color: #4c4c4c;
+  }
+`;
+
+const LBt = styled.button`
+  padding: 0px 0px 0px 50px;
+  text-align: left;
+  letter-spacing: 1px;
+  width: 220px;
   height: 40px;
   border: none;
   font-family: "Coding";
   color: #d5d5d5;
-  font-size: 18px;
+  font-size: 16px;
   background-color: #393939;
   &:hover {
     cursor: pointer;
@@ -51,12 +68,11 @@ const CBt = styled.button`
 
 function Category() {
   const [pbtVisible, setPbtVisible] = useState(false);
-  const [webVisible, setWebVisible] = useState(false);
-  const [pyVisible, setPyVisible] = useState(false);
-  const [alVisible, setAlVisible] = useState(false);
-  const [dlVisible, setDlVisible] = useState(false);
+  const [stVisible, setStVisible] = useState(false);
+  const [lfVisible, setLfVisible] = useState(false);
+  const [hbVisible, setHbVisible] = useState(false);
   const [pjVisible, setPjVisible] = useState(false);
-  const [unVisible, setUnVisible] = useState(false);
+
   return (
     <Container>
       <PBt
@@ -69,39 +85,17 @@ function Category() {
       {pbtVisible && (
         <CBt
           onClick={() => {
-            setWebVisible(!webVisible);
+            setStVisible(!stVisible);
           }}
         >
-          {webVisible ? "⌄ Web" : "> Web"}
+          {stVisible ? "⌄ Study" : "> Study"}
         </CBt>
       )}
-      {pbtVisible && (
-        <CBt
-          onClick={() => {
-            setPyVisible(!pyVisible);
-          }}
-        >
-          {pyVisible ? "⌄ Python" : "> Python"}
-        </CBt>
-      )}
-      {pbtVisible && (
-        <CBt
-          onClick={() => {
-            setAlVisible(!alVisible);
-          }}
-        >
-          {alVisible ? "⌄ Algorithm" : "> Algorithm"}
-        </CBt>
-      )}
-      {pbtVisible && (
-        <CBt
-          onClick={() => {
-            setDlVisible(!dlVisible);
-          }}
-        >
-          {dlVisible ? "⌄ DeepLearning" : "> DeepLearning"}
-        </CBt>
-      )}
+      {pbtVisible && stVisible && <LBt>{">"} Web</LBt>}
+      {pbtVisible && stVisible && <LBt>{">"} Python</LBt>}
+      {pbtVisible && stVisible && <LBt>{">"} Algorithm</LBt>}
+      {pbtVisible && stVisible && <LBt>{">"} DeepLearning</LBt>}
+      {pbtVisible && stVisible && <LBt>{">"} Unity</LBt>}
       {pbtVisible && (
         <CBt
           onClick={() => {
@@ -114,10 +108,19 @@ function Category() {
       {pbtVisible && (
         <CBt
           onClick={() => {
-            setUnVisible(!unVisible);
+            setLfVisible(!lfVisible);
           }}
         >
-          {unVisible ? "⌄ Unity" : "> Unity"}
+          {lfVisible ? "⌄ Life" : "> Life"}
+        </CBt>
+      )}
+      {pbtVisible && (
+        <CBt
+          onClick={() => {
+            setHbVisible(!hbVisible);
+          }}
+        >
+          {hbVisible ? "⌄ Hobby" : "> Hobby"}
         </CBt>
       )}
     </Container>
