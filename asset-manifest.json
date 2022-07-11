@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/nyanyak-blog/static/css/main.e2cb0d31.css",
-    "main.js": "/nyanyak-blog/static/js/main.942bc488.js",
+    "main.js": "/nyanyak-blog/static/js/main.a6335e29.js",
     "static/js/787.f587e8d5.chunk.js": "/nyanyak-blog/static/js/787.f587e8d5.chunk.js",
     "static/media/D2Coding.eot": "/nyanyak-blog/static/media/D2Coding.0e3584964a85e7ef0f0c.eot",
     "static/media/D2Coding.ttf": "/nyanyak-blog/static/media/D2Coding.8e1251be588cceb18bae.ttf",
     "static/media/D2Coding.woff": "/nyanyak-blog/static/media/D2Coding.8a702c12481788ff9b89.woff",
     "static/media/background.jpg": "/nyanyak-blog/static/media/background.22f489aacd2f85478f16.jpg",
     "static/media/profile.jpg": "/nyanyak-blog/static/media/profile.812fbf46c37f11119797.jpg",
+    "static/media/science.png": "/nyanyak-blog/static/media/science.1f690197c68c6e8a45f2.png",
     "static/media/YouTube.png": "/nyanyak-blog/static/media/YouTube.5520ae5a26efacf950ea.png",
     "index.html": "/nyanyak-blog/index.html",
     "main.e2cb0d31.css.map": "/nyanyak-blog/static/css/main.e2cb0d31.css.map",
-    "main.942bc488.js.map": "/nyanyak-blog/static/js/main.942bc488.js.map",
+    "main.a6335e29.js.map": "/nyanyak-blog/static/js/main.a6335e29.js.map",
     "787.f587e8d5.chunk.js.map": "/nyanyak-blog/static/js/787.f587e8d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e2cb0d31.css",
-    "static/js/main.942bc488.js"
+    "static/js/main.a6335e29.js"
   ]
 }
