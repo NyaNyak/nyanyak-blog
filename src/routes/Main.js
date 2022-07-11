@@ -9,20 +9,21 @@ import Zoom from "react-reveal/Zoom";
 import Bounce from "react-reveal/Bounce";
 import Slide from "react-reveal/Slide";
 import Prof from "../image/profile.jpg";
+import Slider from "../components/Slide";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #272727;
-  margin-left: 220px;
+  margin-left: 28vh;
   font-family: "Coding";
   flex-direction: column;
   letter-spacing: 3px;
   heigth: 100%;
   color: white;
   overflow-y: hidden;
-  @media (max-width: 500px) {
+  @media (max-width: 850px) {
     margin-left: 0vw;
   }
 `;
@@ -32,7 +33,7 @@ const Wrapper = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 850px) {
     margin-left: 0vw;
   }
 `;
@@ -86,7 +87,13 @@ const Profile = styled.div`
 
 const Introduce = styled.div`
   height: 100vh;
-  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+const Project = styled.div`
+  width: 100%;
 `;
 
 const Bg = styled.div`
@@ -198,6 +205,7 @@ function Main() {
       outerDivRefCurrent.removeEventListener("wheel", wheelHandler);
     };
   }, []);
+
   return (
     <Container>
       <Wrapper ref={outerDivRef}>
@@ -245,7 +253,11 @@ function Main() {
             </Bg>
           </Profile>
         </Fade>
-        <Introduce>hello</Introduce>
+        <Introduce>
+          <Project>
+            <Slider />
+          </Project>
+        </Introduce>
       </Wrapper>
     </Container>
   );

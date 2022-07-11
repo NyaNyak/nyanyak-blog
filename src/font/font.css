@@ -8,3 +8,32 @@
 
   font-style: normal;
 }
+@font-face {
+  font-family: "Lolfont";
+  font-display: fallback;
+
+  src: url("./LOL.ttf") format("truetype"), url("./LOL.woff") format("woff"),
+    url("./LOL.eot") format("embedded-opentype");
+
+  font-style: normal;
+}
+@font-face {
+  font-family: "Discord";
+  font-display: fallback;
+
+  src: url("./Discord.ttf") format("truetype"),
+    url("./Discord.woff") format("woff"),
+    url("./Discord.eot") format("embedded-opentype");
+
+  font-style: normal;
+}
+@font-face {
+  font-family: "DiscordBold";
+  font-display: fallback;
+
+  src: url("./DiscordBold.ttf") format("truetype"),
+    url("./DiscordBold.woff") format("woff"),
+    url("./DiscordBold.eot") format("embedded-opentype");
+
+  font-style: normal;
+}

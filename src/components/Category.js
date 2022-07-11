@@ -5,28 +5,28 @@ import "../font/font.css";
 const Container = styled.div`
   background-color: #393939;
   height: 100vh;
-  width: 220px;
+  width: 28vh;
   display: flex;
   position: absolute;
   flex-direction: column;
   top: 6vh;
   z-index: 7;
-  @media (max-width: 500px) {
+  @media (max-width: 850px) {
     top: 5vh;
     z-index: 20;
   }
 `;
 
 const PBt = styled.button`
-  padding: 10px 0px 10px 10px;
+  padding: 10px 0px 10px 2vh;
   text-align: left;
-  letter-spacing: 1px;
-  width: 220px;
-  height: 60px;
+  letter-spacing: 2px;
+  width: 28vh;
+  height: 8vh;
   border: none;
   font-family: "Coding";
   color: #d5d5d5;
-  font-size: 18px;
+  font-size: 2.3vh;
   background-color: #393939;
   &:hover {
     cursor: pointer;
@@ -35,15 +35,15 @@ const PBt = styled.button`
 `;
 
 const CBt = styled.button`
-  padding: 0px 0px 0px 30px;
+  padding: 0px 0px 0px 4vh;
   text-align: left;
-  letter-spacing: 1px;
-  width: 220px;
-  height: 50px;
+  letter-spacing: 2px;
+  width: 28vh;
+  height: 6.5vh;
   border: none;
   font-family: "Coding";
   color: #d5d5d5;
-  font-size: 17px;
+  font-size: 2vh;
   background-color: #393939;
   &:hover {
     cursor: pointer;
@@ -52,15 +52,15 @@ const CBt = styled.button`
 `;
 
 const LBt = styled.button`
-  padding: 0px 0px 0px 50px;
+  padding: 0px 0px 0px 5.5vh;
   text-align: left;
   letter-spacing: 1px;
-  width: 220px;
-  height: 40px;
+  width: 28vh;
+  height: 6vh;
   border: none;
   font-family: "Coding";
   color: #d5d5d5;
-  font-size: 16px;
+  font-size: 1.8vh;
   background-color: #393939;
   &:hover {
     cursor: pointer;
@@ -72,6 +72,7 @@ function Category() {
   const [pbtVisible, setPbtVisible] = useState(false);
   const [stVisible, setStVisible] = useState(false);
   const [lfVisible, setLfVisible] = useState(false);
+  const [gmVisible, setGmVisible] = useState(false);
   const [hbVisible, setHbVisible] = useState(false);
   const [pjVisible, setPjVisible] = useState(false);
 
@@ -116,6 +117,16 @@ function Category() {
           {lfVisible ? "⌄ Life" : "> Life"}
         </CBt>
       )}
+      {pbtVisible && (
+        <CBt
+          onClick={() => {
+            setGmVisible(!gmVisible);
+          }}
+        >
+          {gmVisible ? "⌄ Game" : "> Game"}
+        </CBt>
+      )}
+      {pbtVisible && gmVisible && <LBt>🍁 MapleStory</LBt>}
       {pbtVisible && (
         <CBt
           onClick={() => {

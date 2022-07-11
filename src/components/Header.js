@@ -18,7 +18,7 @@ const Container = styled.div`
   left: 0vw;
   color: #d5d5d5;
   background-color: #5d5d5d;
-  @media (max-width: 500px) {
+  @media (max-width: 850px) {
     height: 5vh;
     top: 0vh;
   }
@@ -34,7 +34,7 @@ const LogoBox = styled.div`
 const Logo = styled.div`
   font-size: 3vh;
   font-family: "Coding";
-  @media (max-width: 500px) {
+  @media (max-width: 850px) {
     font-size: 2.5vh;
   }
 `;
@@ -79,7 +79,7 @@ const Image = styled.img`
 function Header() {
   const [visible, setVisible] = useState(false);
   const isMobile = useMediaQuery({
-    query: "(max-width:500px)",
+    query: "(max-width:850px)",
   });
   return (
     <Container>
