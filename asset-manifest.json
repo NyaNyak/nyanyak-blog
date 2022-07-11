@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nyanyak-blog/static/css/main.e2cb0d31.css",
-    "main.js": "/nyanyak-blog/static/js/main.a6335e29.js",
+    "main.css": "/nyanyak-blog/static/css/main.ab724ac7.css",
+    "main.js": "/nyanyak-blog/static/js/main.c439dfd9.js",
     "static/js/787.f587e8d5.chunk.js": "/nyanyak-blog/static/js/787.f587e8d5.chunk.js",
     "static/media/D2Coding.eot": "/nyanyak-blog/static/media/D2Coding.0e3584964a85e7ef0f0c.eot",
     "static/media/D2Coding.ttf": "/nyanyak-blog/static/media/D2Coding.8e1251be588cceb18bae.ttf",
@@ -9,14 +9,23 @@
     "static/media/background.jpg": "/nyanyak-blog/static/media/background.22f489aacd2f85478f16.jpg",
     "static/media/profile.jpg": "/nyanyak-blog/static/media/profile.812fbf46c37f11119797.jpg",
     "static/media/science.png": "/nyanyak-blog/static/media/science.1f690197c68c6e8a45f2.png",
+    "static/media/Discord.ttf": "/nyanyak-blog/static/media/Discord.fe1b9a7ae9914075e8ec.ttf",
+    "static/media/DiscordBold.ttf": "/nyanyak-blog/static/media/DiscordBold.aeb97397cb8494d493eb.ttf",
+    "static/media/LOL.ttf": "/nyanyak-blog/static/media/LOL.b7f0a4bc1da48c89dcf5.ttf",
+    "static/media/Discord.eot": "/nyanyak-blog/static/media/Discord.cd43e32c22cf731e1936.eot",
+    "static/media/DiscordBold.eot": "/nyanyak-blog/static/media/DiscordBold.e87e10760c5b11536e9f.eot",
+    "static/media/LOL.eot": "/nyanyak-blog/static/media/LOL.1e0975c750de17f5441f.eot",
     "static/media/YouTube.png": "/nyanyak-blog/static/media/YouTube.5520ae5a26efacf950ea.png",
+    "static/media/LOL.woff": "/nyanyak-blog/static/media/LOL.fc0fe53e72b44cce1a38.woff",
+    "static/media/Discord.woff": "/nyanyak-blog/static/media/Discord.248b2ac41975e02bddbb.woff",
+    "static/media/DiscordBold.woff": "/nyanyak-blog/static/media/DiscordBold.f1b676790cf0e1cb0ca7.woff",
     "index.html": "/nyanyak-blog/index.html",
-    "main.e2cb0d31.css.map": "/nyanyak-blog/static/css/main.e2cb0d31.css.map",
-    "main.a6335e29.js.map": "/nyanyak-blog/static/js/main.a6335e29.js.map",
+    "main.ab724ac7.css.map": "/nyanyak-blog/static/css/main.ab724ac7.css.map",
+    "main.c439dfd9.js.map": "/nyanyak-blog/static/js/main.c439dfd9.js.map",
     "787.f587e8d5.chunk.js.map": "/nyanyak-blog/static/js/787.f587e8d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2cb0d31.css",
-    "static/js/main.a6335e29.js"
+    "static/css/main.ab724ac7.css",
+    "static/js/main.c439dfd9.js"
   ]
 }
