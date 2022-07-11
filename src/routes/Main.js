@@ -98,6 +98,7 @@ const Bg = styled.div`
 const BgImage = styled.img`
   object-fit: cover;
   width: 100%;
+  -webkit-user-drag: none;
   height: 100vh;
   opacity: 0.4;
 `;
@@ -127,7 +128,7 @@ const Status = styled.div`
 const PfImage = styled.img`
   width: 20vh;
   height: 22vh;
-
+  -webkit-user-drag: none;
   border-radius: 30%;
   overflow: hidden;
 `;

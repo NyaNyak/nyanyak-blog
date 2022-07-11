@@ -93,11 +93,11 @@ function Category() {
           {stVisible ? "⌄ Study" : "> Study"}
         </CBt>
       )}
-      {pbtVisible && stVisible && <LBt>{">"} Web</LBt>}
-      {pbtVisible && stVisible && <LBt>{">"} Python</LBt>}
-      {pbtVisible && stVisible && <LBt>{">"} Algorithm</LBt>}
-      {pbtVisible && stVisible && <LBt>{">"} DeepLearning</LBt>}
-      {pbtVisible && stVisible && <LBt>{">"} Unity</LBt>}
+      {pbtVisible && stVisible && <LBt>📄 Web</LBt>}
+      {pbtVisible && stVisible && <LBt>📄 Python</LBt>}
+      {pbtVisible && stVisible && <LBt>📄 Algorithm</LBt>}
+      {pbtVisible && stVisible && <LBt>📄 DeepLearning</LBt>}
+      {pbtVisible && stVisible && <LBt>📄 Unity</LBt>}
       {pbtVisible && (
         <CBt
           onClick={() => {
@@ -125,6 +125,7 @@ function Category() {
           {hbVisible ? "⌄ Hobby" : "> Hobby"}
         </CBt>
       )}
+      {pbtVisible && hbVisible && <LBt>🖼️ Drawing</LBt>}
     </Container>
   );
 }

@@ -57,6 +57,7 @@ const GIcon = styled.img`
   margin-left: 20px;
   margin-right: 20px;
   width: 28px;
+  -webkit-user-drag: none;
   height: 25px;
   @media (max-width: 500px) {
     margin-right: 30px;
@@ -67,6 +68,7 @@ const GIcon = styled.img`
 const YIcon = styled.img`
   margin-left: 20px;
   width: 60px;
+  -webkit-user-drag: none;
   height: 25px;
   @media (max-width: 500px) {
     margin-left: 30px;
