@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import "../font/font.css";
 import Category from "./Category";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import MenuBt from "../image/MenuButton.png";
 import { useState } from "react";
@@ -78,6 +78,7 @@ const Image = styled.img`
 
 function Header() {
   const [visible, setVisible] = useState(false);
+  const location = useLocation().pathname;
   const isMobile = useMediaQuery({
     query: "(max-width:850px)",
   });
@@ -100,8 +101,11 @@ function Header() {
           <Link
             to="/"
             onClick={() => {
-              window.location.reload();
-              window.scrollTo(0, 0);
+              if (location == "/") {
+                console.log(location);
+                window.location.reload("/");
+                window.scrollTo(0, 0);
+              }
             }}
             style={{ textDecoration: "none", color: "inherit" }}
           >

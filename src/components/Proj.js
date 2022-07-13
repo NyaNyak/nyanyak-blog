@@ -9,7 +9,7 @@ const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+
   background-color: #282d32;
   font-family: "Coding";
   height: 55vh;
@@ -96,7 +96,7 @@ const Image = styled.img`
   }
 `;
 
-function Slide() {
+function Proj() {
   return (
     <Carousel navButtonsAlwaysInvisible duration={900}>
       <Item>
@@ -128,4 +128,4 @@ function Slide() {
     </Carousel>
   );
 }
-export default Slide;
+export default Proj;

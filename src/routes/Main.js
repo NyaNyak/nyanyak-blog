@@ -4,12 +4,13 @@ import { useEffect, useRef } from "react";
 import Fade from "react-reveal/Fade";
 import "../font/font.css";
 import Back from "../image/background.jpg";
+import icon from "../image/scroll.jpg";
 import Flip from "react-reveal/Flip";
 import Zoom from "react-reveal/Zoom";
+import { Link } from "react-router-dom";
 import Bounce from "react-reveal/Bounce";
-import Slide from "react-reveal/Slide";
 import Prof from "../image/profile.jpg";
-import Slider from "../components/Slide";
+import Proj from "../components/Proj";
 
 const Container = styled.div`
   display: flex;
@@ -85,17 +86,6 @@ const Profile = styled.div`
   height: 100vh;
 `;
 
-const Introduce = styled.div`
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`;
-const Project = styled.div`
-  width: 100%;
-`;
-
 const Bg = styled.div`
   position: relative;
   display: flex;
@@ -115,6 +105,7 @@ const Pf = styled.div`
   position: absolute;
   z-index: 5;
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -125,6 +116,22 @@ const Pf = styled.div`
   }
   #status {
     font-size: 2vh;
+  }
+`;
+
+const Button = styled.button`
+  margin-top: 7vh;
+  background-color: transparent;
+  border: 2px solid #e5e5e5;
+  color: #e5e5e5;
+  width: 22vh;
+  height: 6vh;
+  font-family: "Coding";
+  font-size: 2vh;
+  letter-spacing: 2px;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(39, 39, 39, 0.4);
   }
 `;
 const Status = styled.div`
@@ -139,15 +146,59 @@ const PfImage = styled.img`
   border-radius: 30%;
   overflow: hidden;
 `;
+const Introduce = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+const ScrollButton = styled.button`
+  @keyframes flash {
+    0%,
+    20%,
+    40%,
+    to {
+      opacity: 1;
+    }
 
+    30% {
+      opacity: 0;
+    }
+  }
+  margin-bottom: 7vh;
+  background-color: transparent;
+  border: none;
+  color: #e5e5e5;
+  animation: flash 4s infinite;
+  width: 8vh;
+  height: 8vh;
+  font-family: "Discord";
+  font-weight: bold;
+  font-size: 3vh;
+  letter-spacing: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+const Icon = styled.img`
+  width: 7vh;
+  height: auto;
+  filter: brightness(0.8);
+  filter: opacity(0.5);
+`;
+const Project = styled.div`
+  width: 100%;
+`;
 function Main() {
   const outerDivRef = useRef();
+  const pageHeight = window.innerHeight;
   useEffect(() => {
     const wheelHandler = (e) => {
       e.preventDefault();
       const { deltaY } = e;
       const { scrollTop } = outerDivRef.current; // 스크롤 위쪽 끝부분 위치
-      const pageHeight = window.innerHeight; // 화면 세로길이, 100vh와 같습니다.
+      // 화면 세로길이, 100vh와 같습니다.
       if (deltaY > 0) {
         // 스크롤 내릴 때
         if (scrollTop >= 0 && scrollTop < pageHeight) {
@@ -161,11 +212,7 @@ function Main() {
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
           //현재 2페이지
           console.log("현재 2페이지, down");
-          outerDivRef.current.scrollTo({
-            top: pageHeight * 2,
-            left: 0,
-            behavior: "smooth",
-          });
+          window.scrollTo(0, document.body.scrollHeight);
         } else if (scrollTop >= pageHeight * 2 && scrollTop < pageHeight * 3) {
           window.scrollTo(0, document.body.scrollHeight);
         }
@@ -182,6 +229,7 @@ function Main() {
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
           //현재 2페이지
           console.log("현재 2페이지, up");
+          window.scrollTo(0, 0);
           outerDivRef.current.scrollTo({
             top: 0,
             left: 0,
@@ -191,11 +239,6 @@ function Main() {
           // 현재 3페이지
           console.log("현재 3페이지, up");
           window.scrollTo(0, 0);
-          outerDivRef.current.scrollTo({
-            top: pageHeight,
-            left: 0,
-            behavior: "smooth",
-          });
         }
       }
     };
@@ -205,7 +248,20 @@ function Main() {
       outerDivRefCurrent.removeEventListener("wheel", wheelHandler);
     };
   }, []);
-
+  function scroll() {
+    outerDivRef.current.scrollTo({
+      top: pageHeight * 3,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
+  function scrollUp() {
+    outerDivRef.current.scrollTo({
+      top: pageHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
   return (
     <Container>
       <Wrapper ref={outerDivRef}>
@@ -245,17 +301,21 @@ function Main() {
                       <div id="status">🎮 Future Game Dev</div>
                       <div id="status">💜 WebㆍGameㆍDLㆍRL</div>
                     </Status>
+
+                    <Button onClick={scroll}>Show Projects</Button>
                   </Flip>
                 </Bounce>
               </Pf>
-
               <BgImage src={Back} />
             </Bg>
           </Profile>
         </Fade>
         <Introduce>
+          <ScrollButton onClick={scrollUp}>
+            <Icon src={icon} />
+          </ScrollButton>
           <Project>
-            <Slider />
+            <Proj />
           </Project>
         </Introduce>
       </Wrapper>
