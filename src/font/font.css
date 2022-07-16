@@ -37,3 +37,12 @@
 
   font-style: normal;
 }
+@font-face {
+  font-family: "Bazzi";
+  font-display: fallback;
+
+  src: url("./Bazzi.ttf") format("truetype"), url("./Bazzi.woff") format("woff"),
+    url("./Bazzi.eot") format("embedded-opentype");
+
+  font-style: normal;
+}

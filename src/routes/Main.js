@@ -302,7 +302,7 @@ function Main() {
                       <div id="status">💜 WebㆍGameㆍDLㆍRL</div>
                     </Status>
 
-                    <Button onClick={scroll}>Show Projects</Button>
+                    <Button onClick={scroll}>See Projects</Button>
                   </Flip>
                 </Bounce>
               </Pf>
