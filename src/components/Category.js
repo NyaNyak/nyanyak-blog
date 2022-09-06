@@ -11,7 +11,7 @@ const Container = styled.div`
   flex-direction: column;
   top: 6vh;
   z-index: 7;
-  @media (max-width: 850px) {
+  @media (max-width: 920px) {
     top: 5vh;
     z-index: 20;
   }

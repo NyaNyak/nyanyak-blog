@@ -24,7 +24,7 @@ const Container = styled.div`
   heigth: 100%;
   color: white;
   overflow-y: hidden;
-  @media (max-width: 850px) {
+  @media (max-width: 920px) {
     margin-left: 0vw;
   }
 `;
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
-  @media (max-width: 850px) {
+  @media (max-width: 920px) {
     margin-left: 0vw;
   }
 `;

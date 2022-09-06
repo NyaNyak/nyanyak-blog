@@ -9,7 +9,6 @@ const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-color: #212121;
   font-family: "Coding";
   height: 55vh;
@@ -25,10 +24,20 @@ const Item = styled.div`
     border-radius: 14px;
     font-size: 2.8vh;
     font-family: "Bazzi";
+
+    @media (max-width: 420px) {
+      width: 30vw;
+      height: 5vh;
+      font-size: 4vw;
+      margin-bottom: 2vw;
+    }
   }
   #bottom {
     font-size: 2.8vh;
     font-family: "Bazzi";
+    @media (max-width: 420px) {
+      font-size: 4.5vw;
+    }
   }
 `;
 
@@ -37,24 +46,43 @@ const Content = styled.div`
   color: #d5d5d5;
   flex-direction: column;
   position: relative;
+  @media (max-width: 420px) {
+    align-items: center;
+    justify-content: center;
+  }
   #hoverText {
     color: white;
-    margin-left: 38vh;
-    margin-top: -5vh;
+    margin-left: 40vh;
+    font-family: "Coding";
+    letter-spacing: 2px;
+    margin-top: 15vh;
     font-size: 2.5vh;
     font-weight: bold;
-    @media (max-width: 550px) {
-      margin-left: 19vh;
-      margin-top: 0vw;
-      font-size: 2.2vh;
+
+    @media (max-width: 420px) {
+      margin-left: 7vw;
+      font-size: 3.5vw;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
     }
   }
   #title {
     font-size: 7vh;
     font-family: "Bazzi";
-    margin-top: -10vh;
+    margin-top: 0vh;
     font-weight: bold;
     margin-bottom: -1.3vh;
+    @media (max-width: 1160px) {
+      font-size: 5.5vh;
+    }
+    @media (max-width: 780px) {
+      font-size: 5vh;
+    }
+    @media (max-width: 420px) {
+      font-size: 8vw;
+      margin-top: 0vh;
+      margin-bottom: 5vh;
+    }
   }
   #discord {
     font-weight: 100;
@@ -71,51 +99,70 @@ const Content = styled.div`
     font-size: 3vh;
     font-family: "Bazzi";
     margin-top: 1vh;
-    margin-bottom: 10vh;
   }
-  #lol {
-    font-family: Lolfont;
-    font-size: 3vh;
-    background-image: linear-gradient(30deg, #a78329 0%, #d6b96f 80%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-
-    margin-bottom: 5vh;
-  }
-  #for {
-    font-family: "Bazzi";
-    font-size: 2.3vh;
-  }
-  #introduce {
-    margin-top: 3vh;
-    #beebot {
-      font-size: 4.5vh;
-      margin-top: 1vh;
+  #forlol {
+    margin-top: -2.5vh;
+    #for {
+      font-family: "Bazzi";
+      font-size: 2.3vh;
+      @media (max-width: 420px) {
+        font-size: 4.5vw;
+      }
+    }
+    #lol {
+      font-family: Lolfont;
+      font-size: 3vh;
+      background-image: linear-gradient(30deg, #a78329 0%, #d6b96f 80%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      margin-bottom: 5vh;
+      @media (max-width: 420px) {
+        font-size: 5vw;
+      }
     }
   }
-  #bung {
-    margin-left: 11vh;
+
+  #introduce {
+    margin-top: -15vh;
+    margin-bottom: 10vh;
+
+    #beebot {
+      font-size: 4.5vh;
+      color: #ffdd73;
+      margin-top: 1vh;
+      @media (max-width: 420px) {
+        font-size: 6vw;
+        margin-bottom: 0.5vh;
+      }
+    }
+    @media (max-width: 420px) {
+      font-size: 5vw;
+      margin-top: 10vh;
+      margin-bottom: 0vh;
+    }
   }
 `;
 
 const Bee = styled.img`
-  margin-top: -4vh;
+  margin-top: 10vh;
   margin-left: 42vh;
   width: 10vh;
   position: absolute;
   height: auto;
   -webkit-user-drag: none;
   overfit: cover;
-  @media (max-width: 550px) {
-    width: 10vh;
-    margin-left: 20vh;
+
+  @media (max-width: 420px) {
+    margin-left: 0vh;
+    margin-top: -30vh;
+    width: 8vh;
   }
 `;
 
 const Image = styled.img`
-  margin-top: 6vh;
+  margin-top: 20vh;
   margin-left: 33vh;
   width: 32vh;
   height: auto;
@@ -127,9 +174,11 @@ const Image = styled.img`
   &:hover {
     opacity: 0.2;
   }
-  @media (max-width: 550px) {
-    width: 27vh;
-    margin-left: 15vh;
+
+  @media (max-width: 420px) {
+    width: 20vh;
+    margin-left: 0vh;
+    margin-top: -7vh;
   }
 `;
 const Invite = styled.button`
@@ -143,6 +192,26 @@ const Invite = styled.button`
   font-family: "Bazzi";
   background-color: transparent;
   margin-bottom: 1.5vh;
+  @media (max-width: 420px) {
+    width: 30vw;
+    height: 5vh;
+    font-size: 4vw;
+    margin-left: 4vw;
+    margin-top: -2vh;
+    margin-bottom: 0vw;
+  }
+`;
+
+const Butt = styled.div`
+  display: flex;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    color: #d5d5d5;
+  }
+  @media (max-width: 420px) {
+    display: inline-block;
+  }
 `;
 
 function Proj() {
@@ -152,29 +221,41 @@ function Proj() {
         <Content>
           <div id="title">
             <span id="discord">Discord</span> <span id="bee">BEE</span>-BOT
+            <div id="forlol">
+              <span id="for">for </span>
+              <span id="lol">LEAGUE OF LEGENDS</span>
+            </div>
           </div>
           <div id="text">
-            <span id="for">for </span>
-            <span id="lol">LEAGUE OF LEGENDS</span>
-            <span id="bung">붕붕!</span>
-            <br />
+            <div id="hoverText">Usage Example</div>
             <div id="introduce">
               협곡의 귀여운 서포터<div id="beebot">『꿀벌봇』</div>
             </div>
           </div>
           <br />
-          <button id="info">자세히 보기</button>
 
           <Bee src="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjEx/MDAxNTI2NTQ3NTYzMDI0.GGFyQth1IVreeUdrVmYVopJlv8ZX2EsTQGqQ3h6ktjEg.r6jltvwy2lBUvB_Wh4M9xvxw-gwV4RHUR1AXSF-nqpMg.PNG.heekyun93/4fb137544b692e53.png?type=w800" />
           <Image src={Science} />
-          <p id="hoverText">Usage Example</p>
 
-          <a
-            href="https://discord.com/api/oauth2/authorize?client_id=921970660669005854&permissions=8&scope=bot"
-            target="_blank"
-          >
-            <Invite>서버에 추가</Invite>
-          </a>
+          <Butt>
+            <button id="info">
+              <a
+                href="https://github.com/NyaNyak/discord-beebot"
+                target="_blank"
+              >
+                자세히 보기
+              </a>
+            </button>
+
+            <Invite>
+              <a
+                href="https://discord.com/api/oauth2/authorize?client_id=921970660669005854&permissions=8&scope=bot"
+                target="_blank"
+              >
+                서버에 추가
+              </a>
+            </Invite>
+          </Butt>
           <div id="bottom">지금 바로 데려가세요!</div>
         </Content>
       </Item>
