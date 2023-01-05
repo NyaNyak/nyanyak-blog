@@ -259,8 +259,12 @@ function Proj() {
           <div id="bottom">지금 바로 데려가세요!</div>
         </Content>
       </Item>
-      <Item>내이름은</Item>
-      <Item>캐로셀</Item>
+      <Item>
+        <Content>안경냥이 클리커</Content>
+      </Item>
+      <Item>
+        <Content>학식 알리미</Content>
+      </Item>
     </Carousel>
   );
 }
