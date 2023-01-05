@@ -205,14 +205,14 @@ function makeSnowFlake() {
   const delay = Math.random() * 10;
   const initialOpacity = Math.random() + 0.2;
   const duration = Math.random() * 20 + MIN_DURATION;
-  const size = Math.random() * 5;
+  const size = Math.random() * 4;
 
   snowFlake.classList.add("snowflake");
   snowFlake.style.left = `${Math.random() * window.screen.width}px`;
   snowFlake.style.animationDelay = `${delay}s`;
   snowFlake.style.opacity = initialOpacity - 0.1;
-  snowFlake.style.width = `${5 + size}px`;
-  snowFlake.style.height = `${5 + size}px`;
+  snowFlake.style.width = `${4 + size}px`;
+  snowFlake.style.height = `${4 + size}px`;
   snowFlake.style.animation = `fall ${duration}s linear`;
 
   body.appendChild(snowFlake);
