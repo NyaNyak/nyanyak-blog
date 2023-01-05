@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import React from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Fade from "react-reveal/Fade";
 import "../font/font.css";
 import "./snow.css";
@@ -31,7 +31,10 @@ const Container = styled.div`
 `;
 
 const Snow = styled.div`
-  display: flex;
+  margin-left: auto;
+`;
+const SnowBtn = styled.button`
+  margin-left: auto;
 `;
 
 const Wrapper = styled.div`
@@ -196,9 +199,9 @@ const Icon = styled.img`
 const Project = styled.div`
   width: 100%;
 `;
-
 const body = document.querySelector("body");
 const MIN_DURATION = 10;
+let isSnow = 1;
 
 function makeSnowFlake() {
   const snowFlake = document.createElement("div");
@@ -217,10 +220,16 @@ function makeSnowFlake() {
 
   body.appendChild(snowFlake);
 
-  setTimeout(() => {
-    body.removeChild(snowFlake);
-    makeSnowFlake();
-  }, (duration + delay) * 1000);
+  if (isSnow == 0) {
+    setTimeout(() => {
+      body.removeChild(snowFlake);
+    }, 10);
+  } else {
+    setTimeout(() => {
+      body.removeChild(snowFlake);
+      makeSnowFlake();
+    }, (duration + delay) * 1000);
+  }
 }
 
 function renderSnow() {
@@ -303,6 +312,18 @@ function Main() {
   }
   return (
     <Container>
+      <SnowBtn
+        onClick={() => {
+          if (isSnow == 1) {
+            isSnow = 0;
+          } else if (isSnow == 0) {
+            isSnow = 1;
+          }
+          console.log(isSnow);
+        }}
+      >
+        Let It Snow!
+      </SnowBtn>
       <Snow>{renderSnow()}</Snow>
       <Wrapper ref={outerDivRef}>
         <Intro>
